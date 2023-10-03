@@ -85,7 +85,8 @@ while IsProgramOpen(RobloxProcName):
         details=GAMENAME,
         state=f"by {GAMECREATOR}",
         large_image=GAMETHUMBNAIL,
-        large_text="LatteJuice",
+        small_image="lattejuice",
+        large_text="Powered by LatteJuice.",
         start=StartTime + 3,
         buttons=[
                 {
