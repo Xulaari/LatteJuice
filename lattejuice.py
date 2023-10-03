@@ -29,7 +29,7 @@ client_id = "1137072340375707758"
 RPC = Presence(client_id)
 
 if len(sys.argv) > 1:
-    keystroke = sys.argv[1]
+    keystroke = sys.argv[1].lower()
 else:
     print("No argument for the game name/gameid. Usage: lattejuice <game name/placeid|edit>")
     sys.exit(0)
@@ -56,11 +56,11 @@ elif keystroke.isdigit():
     UID = requests.get(f"https://apis.roblox.com/universes/v1/places/{keystroke}/universe").json()["universeId"]
 elif keystroke == "edit":
     os.system(f"nano /home/{username}/.lattejuice/settings.json")
-    exit(0)
+    sys.exit(0)
 else:
     print("Invalid argument. Exiting in 3 seconds.")
     time.sleep(3)
-    exit(0)
+    sys.exit(0)
 
 GAMENAME = requests.get(f"https://games.roblox.com/v1/games?universeIds={UID}").json()["data"][0]["name"]
 
