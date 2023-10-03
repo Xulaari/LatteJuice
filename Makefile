@@ -5,6 +5,7 @@ clean:
 	sudo rm -rf $(CURDIR)/dist
 	sudo rm -rf $(CURDIR)/lattejuice.spec
 
+remove:
 	sudo rm -rf /usr/bin/lattejuice
 
 build:
