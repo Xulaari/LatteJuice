@@ -28,7 +28,7 @@ def IsProgramOpen(program):
 client_id = "1137072340375707758"
 RPC = Presence(client_id)
 
-if len(sys.argv) > 1:
+if len(sys.argv) > 0:
     keystroke = sys.argv[1].lower()
 else:
     print("No argument for the game name/gameid. Usage: lattejuice <game name/placeid|edit>")
