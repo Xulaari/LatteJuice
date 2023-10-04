@@ -1,4 +1,4 @@
-.PHONY: clean build install
+.PHONY: clean remove build install
 
 clean:
 	sudo rm -rf $(CURDIR)/build
